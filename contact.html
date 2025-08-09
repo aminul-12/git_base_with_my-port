@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            text-align: center;
+            color: #00ffd5;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            flex: 1 1 45%;
+            margin-bottom: 20px;
+        }
+
+        .info-box h3 {
+            margin-bottom: 5px;
+            color: #00ffd5;
+        }
+
+        .info-box p,
+        .info-box a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid #00ffd5;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #00ffd5;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #00e0c0;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #00ffd5;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .info-box {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .smart-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #00ffd5;
+            background-color: transparent;
+            border: 2px solid #00ffd5;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 213, 0.5);
+        }
+
+        .smart-button:hover {
+            background-color: #00ffd5;
+            color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(0, 255, 213, 0.8);
+            transform: scale(1.05);
+        }
+
+        .button-wrapper {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+
+    <div class="button-wrapper">
+        <a href="home.html" class="smart-button">⬅ Home</a>
+    </div>
+
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+
+        <div class="contact-info">
+            <div class="info-box">
+                <h3>📱 WhatsApp</h3>
+                <a href="https://wa.me/8801306466265" target="_blank">📞 Click Here</a>
+
+
+            </div>
+            <div class="info-box">
+                <h3>📧 Email</h3>
+                <a href="mailto:mdaminulislam1516@gmail.com">mdaminulislam1516@gmail.com</a>
+
+            </div>
+            <div class="info-box">
+                <h3>📍 Location</h3>
+                <p>
+                    <a href="https://www.google.com/maps/place/Sylhet,+Bangladesh" target="_blank"
+                        style="color: #edf1f1; text-decoration: none; font-weight: bold; transition: color 0.3s ease;">
+                        Sylhet, Bangladesh
+                    </a>
+                      
+                </p>
+
+            </div>
+            <div class="info-box">
+                <h3>🌐 Website</h3>
+                <a href="https://amndjcjcn360.blogspot.com/?m=1" target="_blank">www.aminul-blog.com</a>
+            </div>
+        </div>
+
+        <form name="contact" method="POST" action="/thankyou.html" data-netlify="true">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+
+        </form>
+
+        <div class="social-links">
+            <h3>🔗 Connect with me</h3>
+            <a href="https://www.linkedin.com/in/aminul-islam-97282b25a" target="_blank">LinkedIn</a>
+            <a href="https://github.com/aminul-12" target="_blank">GitHub</a>
+            <a href="https://dev.to/aminul12" target="_blank">Dev.to</a>
+            <a href="https://www.youtube.com/@applyenglish3270" target="_blank">YouTube</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

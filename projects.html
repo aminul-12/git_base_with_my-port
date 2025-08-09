@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Curricular | Aminul Islam</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-nav {
+            background-color: #1e1e1e;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-container {
+            padding: 3rem 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #00adb5;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .activity-box {
+            background-color: #1f1f1f;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid #00adb5;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 173, 181, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .activity-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 640px;
+            height: 360px;
+            margin-bottom: 1.5rem;
+        }
+
+        .video-btn {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background-color: #00adb5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-btn:hover {
+            background-color: #007f85;
+        }
+
+        .toast-warning {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #cccccc;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-links a {
+            color: #999;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00ffd5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222831;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+">
+        <h2 style="margin: 0;">
+            <a href="home.html" style="
+       color: #00adb5;
+       text-decoration: none;
+       font-family: 'Segoe UI', sans-serif;
+       font-size: 24px;
+       position: relative;
+       padding-bottom: 4px;
+       transition: color 0.3s ease;
+     " onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#00adb5'">
+                Aminul Islam
+                <span style="
+       content: '';
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       height: 2px;
+       width: 0;
+       background-color: #ffffff;
+       transition: width 0.3s ease;
+     "></span>
+            </a>
+        </h2>
+
+        <script>
+            const link = document.querySelector('h2 a');
+            const span = document.createElement('span');
+            span.style.position = 'absolute';
+            span.style.bottom = '0';
+            span.style.left = '0';
+            span.style.height = '2px';
+            span.style.width = '0';
+            span.style.backgroundColor = '#ffffff';
+            span.style.transition = 'width 0.3s ease';
+            link.appendChild(span);
+
+            link.addEventListener('mouseover', () => {
+                span.style.width = '100%';
+            });
+            link.addEventListener('mouseout', () => {
+                span.style.width = '0';
+            });
+        </script>
+        <div>
+            <a href="index.html" style="
+            color: #eeeeee;
+            background-color: #00adb5;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Segoe UI', sans-serif;
+            transition: background-color 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#007f88'" onmouseout="this.style.backgroundColor='#00adb5'">🏠
+                Home</a>
+        </div>
+    </nav>
+    <div class="section-container">
+        <h1>🏋‍♂ Extra Curricular Activities</h1>
+
+        <div class="activity-box">
+            <h2>Fitness Enthusiast & Gym Training</h2>
+            <p>I’ve been consistently working out and training at the gym, focusing on both physical strength and mental
+                well-being. Regular fitness is part of my routine and lifestyle.</p>
+        </div>
+
+        <div class="activity-box">
+            <h2>Public Speaking & Leadership</h2>
+            <p>Actively participated in university seminars and leadership workshops. I’ve led student groups in
+                organizing technical and cultural events.</p>
+        </div>
+
+        <div class="activity-box">
+            <h2>Tech Community Involvement</h2>
+            <p>Contributed to open-source, attended hackathons, and mentored juniors in basic web and AI projects.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>🎬 Gym & YouTube Activity</h2>
+            <!-- Video 1 -->
+            <iframe width="356" height="634" src="https://www.youtube.com/embed/NKJv731eTd0"
+                title="Sweat today,shine tomorrow💪Keep pushing,keep growing#FitnessGoals #StayActive#fitness#jim#motivation"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- Video 2 -->
+            <iframe width="356" height="634" src="https://www.youtube.com/embed/JFu0Rs3Ay3s"
+                title="Workout Time 💪 #motivation #lifeisbutadream #fitness #fitnessjourney" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <br>
+            <a href="https://www.youtube.com/@aminuleduhome8464" class="video-btn" target="_blank">Visit My YouTube
+                Channel</a>
+            <a href="https://youtube.com/playlist?list=PLvkqCVVoPsxVuERnxqaEgPqeeirL66TBU&si=VF6InOCgCFLcEv1W"
+                class="video-btn">Watch More Gym Videos</a>
+        </div>
+    </div>
+
+    <div id="customWarning" class="toast-warning">⚠ Content protection active</div>
+
+    <script src="script.js"></script>
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> 👉 Aminul Islam. All
+            rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

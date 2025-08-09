@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Settings</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #101010, #000);
+            font-family: 'Segoe UI', sans-serif;
+            color: #eee;
+            padding: 50px;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: #00ffd5;
+            margin-bottom: 30px;
+            animation: fadeInTop 1s ease-out;
+        }
+
+        .setting-box {
+            max-width: 650px;
+            margin: auto;
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid #00ffd5;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 0 20px #00ffd544;
+            animation: bounceIn 0.6s ease;
+        }
+
+        .toggle-option {
+            margin: 20px 0;
+            padding: 18px;
+            font-size: 1.1em;
+            background: #1c1c1c;
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .toggle-option:hover {
+            box-shadow: 0 0 15px #00aaff99;
+            background-color: #0f2d47;
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>⚙ Technical & Ethical Perspective</h1>
+
+    <div class="setting-box">
+        <div class="toggle-option">🧠 Curiosity-Driven Learning: I believe in deep understanding and research over
+            shortcut solutions.</div>
+        <div class="toggle-option">🔐 Privacy-First Coding: All projects are built with user safety and ethical data use
+            in mind.</div>
+        <div class="toggle-option">🌐 Global Accessibility: I optimize my websites to serve viewers across all devices
+            and regions.</div>
+        <div class="toggle-option">💡 Coding Principle: Write clean, scalable, and maintainable code.</div>
+        <div class="toggle-option">📚 Future Vision: To pursue research in system security and digital privacy at
+            leading universities.</div>
+        <p class="footer-note">Last updated: July 2025</p>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='dashboard.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Portfolio Hub
+        </button>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='index.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Home
+        </button>
+    </div>
+
+</body>
+
+</html>

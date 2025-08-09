@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Secure Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        :root {
+            --bg: radial-gradient(circle at top, #111, #000);
+            --box-bg: linear-gradient(145deg, #1c1c1c, #0f0f0f);
+            --text: #eee;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-box {
+            max-width: 480px;
+            width: 100%;
+            padding: 35px;
+            border-radius: 16px;
+            background: var(--box-bg);
+            box-shadow: 0 0 25px #00ffd599;
+            border: 2px solid #00ffd5;
+        }
+
+        .logo {
+            width: 60px;
+            margin-bottom: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: #00ffd5;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-top: 25px;
+            color: #00ffd5;
+            border-bottom: 1px dashed #00ffd5;
+            padding-bottom: 5px;
+        }
+
+        .login-btn,
+        .logout-btn,
+        #toggle-mode {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #00ffd5, #00e6ba);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .login-btn:hover,
+        .logout-btn:hover,
+        #toggle-mode:hover {
+            box-shadow: 0 0 20px #00ffd5aa;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            background-color: #2b2b2b;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .input-field:focus {
+            outline: 2px solid #00ffd5;
+        }
+
+        #user-info {
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #00ffd5;
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 0 15px #00ffd599;
+            z-index: 1000;
+        }
+
+        @media (max-width: 600px) {
+            .login-box {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+
+        body {
+            background-color: #111;
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .login-box {
+            background: #222;
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 255, 213, 0.3);
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .typing-text {
+            margin-top: 25px;
+            font-size: 1.05em;
+            color: #00ffd5;
+            font-weight: bold;
+            min-height: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #00ffd5;
+            color: #111;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00c9aa;
+        }
+
+
+        /* 🔄 Existing styles remain unchanged */
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .login-box {
+                width: 100%;
+                max-width: 360px;
+                padding: 25px 20px;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+
+            .typing-text {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            .logo {
+                width: 50px;
+            }
+
+            .login-btn,
+            .logout-btn,
+            #toggle-mode {
+                font-size: 1em;
+                padding: 12px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="tel"],
+            input[type="submit"],
+            #otp {
+                font-size: 0.95em;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            .popup {
+                font-size: 14px;
+                padding: 10px 16px;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .login-box {
+                padding: 20px 15px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .login-btn,
+            .logout-btn {
+                font-size: 0.95em;
+            }
+
+            .typing-text {
+                font-size: 0.95em;
+            }
+
+            input[type="submit"] {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="typing-text">
+        <span id="typed-output"></span>
+    </div>
+    </div>
+
+    <script>
+        const typedText = [
+            "Welcome to Aminul's Secure Login!",
+            "Your privacy is our priority 🔐",
+            "Fast • Reliable • Firebase Powered 🚀"
+        ];
+
+        let typedIndex = 0;
+        let charIndex = 0;
+
+        function typeEffect() {
+            if (typedIndex >= typedText.length) typedIndex = 0;
+            const currentText = typedText[typedIndex];
+            document.getElementById("typed-output").textContent = currentText.slice(0, ++charIndex);
+
+            if (charIndex === currentText.length) {
+                typedIndex++;
+                charIndex = 0;
+                setTimeout(typeEffect, 1500);
+            } else {
+                setTimeout(typeEffect, 100);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+
+    <div class="login-box">
+        <img src="logu_2.png" alt="Logo" class="logo" />
+        <h2>🔐 Secure Login</h2>
+
+        <h3>Google Sign-In</h3>
+        <button id="google-login" class="login-btn">Sign in with Google</button>
+
+        <h3>Email & Password</h3>
+        <input type="email" id="email" class="input-field" placeholder="📧 Email">
+        <input type="password" id="password" class="input-field" placeholder="🔒 Password">
+        <button id="email-login" class="login-btn">Sign in with Email</button>
+
+        <h3>Phone OTP</h3>
+        <input type="tel" id="phone" class="input-field" placeholder="📱 +8801XXXXXXXXX">
+        <div id="recaptcha-container"></div>
+        <button id="phone-login" class="login-btn">Send OTP</button>
+        <input type="text" id="otp" class="input-field" placeholder="🔢 Enter OTP">
+        <button id="verify-otp" class="login-btn">Verify OTP</button>
+
+        <button id="toggle-mode">🌗Dark Mode</button>
+
+        <div id="user-info">
+            <p id="welcome-text">Welcome!</p>
+            <button id="logout-btn" class="logout-btn">Log Out</button>
+        </div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+        import {
+            getAuth,
+            GoogleAuthProvider,
+            signInWithPopup,
+            signInWithEmailAndPassword,
+            RecaptchaVerifier,
+            signInWithPhoneNumber
+        } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCkMA_D5Vai_tMeMfi176htOYSSVU_Z2Z0",
+            authDomain: "aminul-port.firebaseapp.com",
+            projectId: "aminul-port",
+            storageBucket: "aminul-port.appspot.com",
+            messagingSenderId: "449893659169",
+            appId: "1:449893659169:web:bcb03058e8a1b88ebee960",
+            measurementId: "G-8GH8KYGPEK"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        function showPopup(msg) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = msg;
+            document.getElementById('popup-container').appendChild(popup);
+            setTimeout(() => popup.remove(), 3000);
+        }
+
+        document.getElementById("google-login").onclick = () => {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then(res => {
+                    document.getElementById("welcome-text").innerText = "Welcome, " + res.user.displayName;
+                    document.getElementById("user-info").style.display = "block";
+                    showPopup("✅ Google Login Successful!");
+                })
+                .catch(() => showPopup("❌ Google Login Failed"));
+        };
+
+        document.getElementById("email-login").onclick = () => {
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("password").value;
+            signInWithEmailAndPassword(auth, email, pass)
+                .then(res => {
+                    document.getElementById("welcome-text").innerText = "Welcome, " + res.user.email;
+                    document.getElementById("user-info").style.display = "block";
+                    showPopup("✅ Email Login Successful!");
+                })
+                .catch(() => showPopup("❌ Email Login Failed"));
+        };
+
+        window.recaptchaVerifier = new RecaptchaVerifier(auth, 'recaptcha-container', {
+            'size': 'invisible'
+        });
+        let confirmationResult;
+
+        document.getElementById("phone-login").onclick = () => {
+            const phone = document.getElementById("phone").value;
+            signInWithPhoneNumber(auth, phone, window.recaptchaVerifier)
+                .then(result => {
+                    confirmationResult = result;
+                    showPopup("📱 OTP Sent");
+                })
+                .catch(() => showPopup("❌ OTP Failed"));
+        };
+
+        document.getElementById("verify-otp").onclick = () => {
+            const code = document.getElementById("otp").value;
+            confirmationResult.confirm(code)
+                .then(res => {
+                    document.getElementById("welcome-text").innerText = "Welcome, " + res.user.phoneNumber;
+                    document.getElementById("user-info").style.display = "block";
+                    showPopup("✅ Phone Login Successful!");
+                })
+                .catch(() => showPopup("❌ Wrong OTP"));
+        };
+
+        document.getElementById("logout-btn").onclick = () => {
+            auth.signOut().then(() => {
+                document.getElementById("email").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("phone").value = "";
+                document.getElementById("otp").value = "";
+                document.getElementById("user-info").style.display = "none";
+                showPopup("👋 Logged out successfully");
+            });
+        };
+
+        // Dark Mode Toggle
+        document.getElementById("toggle-mode").onclick = () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                document.body.style.background = '#f4f4f4';
+                document.body.style.color = '#222';
+            } else {
+                document.body.style.background = 'var(--bg)';
+                document.body.style.color = 'var(--text)';
+            }
+        };
+    </script>
+</body>
+
+</html>

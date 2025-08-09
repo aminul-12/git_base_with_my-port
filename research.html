@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Research Paper | Aminul Islam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0e0e0e;
+            color: #eee;
+        }
+
+        .main-nav {
+            background-color: #1a1a1a;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 255, 213, 0.2);
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-nav a {
+            color: #00ffd5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #ffffff;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        section {
+            padding: 20px 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .paper-viewer iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 213, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #00ffd5;
+            color: #111;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #00c9aa;
+        }
+
+        .paper-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .thumbnail {
+            width: 160px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .toast-warning {
+            background-color: #ffcc00;
+            color: #111;
+            padding: 10px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .main-footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #00ffd5;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔷 Navbar -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="about.html">👨‍💻 About</a></li>
+            <li><a href="projects.html">🚀 Activities</a></li>
+            <li><a href="research.html">📑 Research Paper</a></li>
+        </ul>
+    </nav>
+
+    <!-- 📑 Page Heading -->
+    <h1>📑 Research Paper</h1>
+
+    <!-- 📄 First PDF Section -->
+    <section>
+        <h2>📄 Research Papers</h2>
+        <div class="paper-viewer">
+            <iframe src="IEEE 2.docx"></iframe>
+            <a href="#" download class="download-btn">⬇ Download PDF</a>
+        </div>
+        <h3>🔍 Preview Thumbnails</h3>
+        <div class="paper-gallery">
+            <img src="c24358-aminul-islam.png" alt="Thumb 1" class="thumbnail">
+            <img src="c24358-aminul-islam.png" alt="Thumb 2" class="thumbnail">
+        </div>
+    </section>
+
+    <!-- 📄 Second PDF Section -->
+    <section>
+        <div class="paper-viewer">
+            <iframe src="The Influence of Social Media on Modern Communication.pdf"></iframe>
+            <a href="The Influence of Social Media on Modern Communication.pdf" download class="download-btn">⬇ Download
+                PDF</a>
+        </div>
+        <h3>🔍 Preview Thumbnails</h3>
+        <div class="paper-gallery">
+            <img src="c24358-aminul-islam.png" alt="Compiler Optimization" class="thumbnail">
+            <img src="c24358-aminul-islam.png" alt="Semantic Error Detection" class="thumbnail">
+        </div>
+    </section>
+
+    <!-- ✅ Toast Protection -->
+    <div id="customWarning" class="toast-warning">⚠ Content protection active</div>
+
+    <!-- 📚 Publication Section -->
+    <section class="research-section">
+        <h2 class="section-title">📑 My Research & Publications</h2>
+        <div class="research-block">
+            <h3>📘 Deployment Privacy in Frontend Platforms</h3>
+            <p>This paper explores privacy tactics for web hosting using Netlify and GitHub Pages.</p>
+            <a href="The Influence of Social Media on Modern Communication.pdf" class="download-btn" target="_blank">🔽
+                Download PDF</a>
+        </div>
+
+        <div class="research-block">
+            <h3>🔐 SEO Strategies for Academic Portfolios</h3>
+            <p>Focused on optimizing portfolio visibility through semantic HTML and structured meta tags.</p>
+            <a href="The Influence of Social Media on Modern Communication.pdf" class="download-btn" target="_blank">🔽
+                Download PDF</a>
+        </div>
+
+        <div class="research-block">
+            <h3>🌐 Global Accessibility in Web Design</h3>
+            <p>Design principles for cross-cultural UI/UX, dark mode compatibility, and lightweight assets.</p>
+            <a href="The Influence of Social Media on Modern Communication.pdf" class="download-btn" target="_blank">🔽
+                Download PDF</a>
+        </div>
+    </section>
+
+    <!-- 🧲 Footer Section -->
+    <footer class="main-footer">
+        <p>&copy; <span id="currentYear"></span> 👉 Aminul Islam. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </footer>
+
+    <!-- 🕒 Year Auto Script -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Analytics & Technology Stack</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #101010, #000);
+            font-family: 'Segoe UI', sans-serif;
+            color: #eee;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: #00ffd5;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInTop 1s ease-out;
+        }
+
+        .msg-card {
+            background: rgba(20, 20, 20, 0.95);
+            border: 2px solid #00ffd5;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 650px;
+            box-shadow: 0 0 15px #00ffd544;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .msg-card:hover {
+            box-shadow: 0 0 25px #00aaffaa;
+            background-color: #0f2d47;
+        }
+
+        .msg-card h3 {
+            margin-bottom: 10px;
+            color: #00ffd5;
+            font-size: 1.3em;
+        }
+
+        .msg-card p {
+            font-size: 1em;
+            color: #ccc;
+            line-height: 1.6em;
+            margin-bottom: 12px;
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📊 Analytics & Technology Stack</h1>
+
+    <div class="msg-card">
+        <h3>🌐 Visitor Insights</h3>
+        <p>This portfolio is optimized for global accessibility and receives visits from academic reviewers, scholarship
+            boards, and tech enthusiasts. Its layout adapts across devices and screen sizes for a seamless viewing
+            experience.</p>
+        <p>Analytics tools used: <strong>Netlify Dashboard</strong> for visit tracking, <strong>GitHub Insights</strong>
+            for repository traffic, and device simulation via Chrome DevTools.</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>🧩 Technologies Used</h3>
+        <p><strong>Frontend:</strong> HTML, CSS (Glow Styled), Vanilla JavaScript, Tailwind CSS for select
+            responsiveness</p>
+        <p><strong>Authentication:</strong> Firebase Authentication</p>
+        <p><strong>Deployment:</strong> GitHub Pages (Private repo) + Netlify Hosting</p>
+        <p><strong>Add-ons:</strong> PDF viewer embed, bounce-in animation, SEO meta tags</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>📚 Learning Outcomes</h3>
+        <p>Through this project, I refined my understanding of responsive web design, secure login flow, animation
+            techniques, and content deployment with privacy in mind. It taught me how strategic layout and design can
+            help communicate academic strength.</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>🎯 Deployment Philosophy</h3>
+        <p>I adopted a privacy-first deployment strategy. The GitHub repository is kept private, while the Netlify site
+            is public-facing. All design decisions—from document viewers to authentication—prioritize ethical
+            presentation and data protection.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='dashboard.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Portfolio Hub
+        </button>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='index.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Home
+        </button>
+    </div>
+
+</body>
+
+</html>

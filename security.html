@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Security Strategy & Privacy Ethics</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #101010, #000);
+            font-family: 'Segoe UI', sans-serif;
+            color: #eee;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            color: #00ffd5;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeInTop 1s ease-out;
+        }
+
+        .msg-card {
+            background: rgba(20, 20, 20, 0.95);
+            border: 2px solid #00ffd5;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 650px;
+            box-shadow: 0 0 15px #00ffd544;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .msg-card:hover {
+            box-shadow: 0 0 25px #00aaffaa;
+            background-color: #0f2d47;
+        }
+
+        .msg-card h3 {
+            margin-bottom: 10px;
+            color: #00ffd5;
+            font-size: 1.3em;
+        }
+
+        .msg-card p {
+            font-size: 1em;
+            color: #ccc;
+            line-height: 1.6em;
+            margin-bottom: 12px;
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔐 Security Strategy & Privacy Ethics</h1>
+
+    <div class="msg-card">
+        <h3>🛡 Authentication Principles</h3>
+        <p>To ensure protection of user credentials and personal access, Firebase Authentication is implemented across
+            all secure modules. This system supports email-password login and includes protection against brute-force
+            attacks and unauthorized access attempts.</p>
+        <p>I emphasize clean authentication flows with feedback, timed sessions, and encrypted validation — especially
+            for future educational platforms and digital portfolio logins.</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>🔍 Repository & Deployment Safeguards</h3>
+        <p>The GitHub repository hosting this dashboard is kept private to prevent unauthorized code access, while the
+            Netlify deployment remains public-facing for scholarly review. This separation ensures control, while
+            maintaining professional accessibility.</p>
+        <p>I use Git version control to track changes securely and review every update manually before deployment — no
+            auto-commits, no direct exposure.</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>📄 Document Security</h3>
+        <p>Integrated PDF viewers are customized with non-downloadable embed settings, preventing third-party sharing or
+            editing. Only authorized reviewers can access the embedded CV and academic papers.</p>
+        <p>Future versions will include role-based access control (RBAC) to manage visibility and activity logging
+            within document sections.</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>🌐 Ethical Coding Philosophy</h3>
+        <p>Security isn't just technology — it's mindset. Every line of code I write reflects a commitment to ethical
+            architecture: no hidden trackers, no third-party data mining, and full transparency on how components
+            interact with users.</p>
+        <p>From login pages to backend logic, my code prefers clarity over shortcuts, and safety over speed.</p>
+    </div>
+
+    <div class="msg-card">
+        <h3>🚫 Penalty & Violation Awareness</h3>
+        <p>In case of breach attempts or misuse, access logs and real-time alerts will flag unauthorized patterns. Any
+            form of repeated violation will result in automated blocking and server-side flagging for review.</p>
+        <p>I also believe in proactive prevention—educating stakeholders and users before issues arise is key to
+            sustainable security.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='dashboard.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Portfolio Hub
+        </button>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='index.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Home
+        </button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Terms of Service</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .terms-box {
+            max-width: 750px;
+            border: 2px solid #00ffcc;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #00ffcc55;
+            background: rgba(20, 20, 20, 0.85);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .terms-box:hover {
+            box-shadow: 0 0 25px #00ffccaa;
+        }
+
+        h1 {
+            color: #00ffd5;
+            text-align: center;
+            font-size: 2.3em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .icon {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .icon img {
+            width: 100px;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #00ffd5aa;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="terms-box">
+        <h1>Terms of Service</h1>
+        <ul>
+            <li>Use of this site signifies acceptance of the terms listed.</li>
+            <li>Users may not misuse, copy, or distribute content without permission.</li>
+            <li>All services provided are on an "as-is" basis with no warranties.</li>
+            <li>Violations may result in termination or legal action.</li>
+            <li>Terms may be updated without prior notice.</li>
+        </ul>
+
+        <div class="icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png" alt="Agreement Icon" />
+            <div class="caption">Your agreement matters ✍</div>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='projects.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Activities
+        </button>
+    </div>
+
+</body>
+
+</html>

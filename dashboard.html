@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: radial-gradient(circle at top, #101010, #000);
+            font-family: 'Segoe UI', sans-serif;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            color: #00ffd5;
+            margin-bottom: 40px;
+            animation: fadeInTop 1s ease-out;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .tile {
+            background: rgba(20, 20, 20, 0.85);
+            border: 2px solid #00ffd5;
+            box-shadow: 0 0 15px #00ffd544;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            animation: bounceIn 0.6s ease;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #00aaffaa;
+            background: #0f2d47;
+        }
+
+        .tile h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #00ffd5;
+        }
+
+        .tile p {
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        @keyframes fadeInTop {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>👋 Welcome, Aminul Islam</h1>
+
+    <div class="tile" onclick="location.href='profile.html'">
+        <h3>📄 Profile</h3>
+        <p>Explore my educational journey and profile.</p>
+    </div>
+
+    <div class="tile" onclick="location.href='settings.html'">
+        <h3>⚙ Vision</h3>
+        <p>A look into my values,credits and future ambitions.</p>
+    </div>
+
+    <div class="tile" onclick="location.href='messages.html'">
+        <h3>💡 My Mission & Motivation</h3>
+        <p>See what drives my coding journey & research focus</p>
+    </div>
+    <div class="tile" onclick="location.href='analytics.html'">
+        <h3>📊 Portfolio Analytics & Technology Stack</h3>
+        <p>What I've Learned-</p>
+    </div>
+    <div class="tile" onclick="location.href='security.html'">
+        <h3>📁 My Ethics in Secure Coding</h3>
+        <p>Learn how I integrate authentication, privacy, and responsible coding practices.</p>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+        <button onclick="location.href='index.html'" style="
+      padding: 12px 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00ffd5, #00e6ba);
+      color: #000;
+      box-shadow: 0 0 15px #00ffd544;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    " onmouseover="this.style.boxShadow='0 0 25px #00ffd599'; this.style.transform='scale(1.05)'"
+            onmouseout="this.style.boxShadow='0 0 15px #00ffd544'; this.style.transform='scale(1)'">
+            🔙 Return to Home
+        </button>
+    </div>
+
+</body>
+
+</html>
